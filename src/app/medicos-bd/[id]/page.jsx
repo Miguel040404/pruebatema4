@@ -1,19 +1,19 @@
 import connection from "@/lib/mysql";
 
-async function PaginaProfesor({params}) {
+async function Paginamedicos({params}) {
     
 const { id } = await params;
-const [rows] = await connection.query('SELECT * FROM profesores WHERE id = ?', [id]); 
+const [rows] = await connection.query('SELECT * FROM medicos WHERE id = ?', [id]); 
     
-    const profesor = rows[0];
+    const medicos = rows[0];
 
     return ( 
         <div>
-            <p>{profesor.nombre}</p>
-            <p>{profesor.especialidad}</p>
-            <p>{profesor.estado_civil}</p>
+            <p>{medicos.nombre}</p>
+            <p>{medicos.especialidad}</p>
+            <p>{medicos.perfil}</p>
         </div>
      );
 }
 
-export default PaginaProfesor;
+export default Paginamedicos;

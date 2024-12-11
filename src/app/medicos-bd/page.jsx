@@ -2,49 +2,49 @@ import connection from "@/lib/mysql";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
-async function eliminarProfesor(formData) {
+async function eliminarMedicos(formData) {
 'use server'
 const id = formData.get('id');
 
-await connection.query('DELETE FROM profesores WHERE id = ?', [id]);
+await connection.query('DELETE FROM medicos WHERE id = ?', [id]);
 }
 
-async function insertarProfesor(formData) {
+async function insertarMedicos(formData) {
     'use server'
     const nombre = formData.get('nombre');
     const especialidad = formData.get('especialidad');
-    const estado_civil = formData.get('estado_civil');
+    const perfil = formData.get('perfil');
 
-    await connection.query('INSERT INTO profesores (nombre, especialidad, estado_civil) VALUES (?, ?, ?)', 
-        [nombre, especialidad, estado_civil]);
-    revalidatePath('/profesores-bd');
+    await connection.query('INSERT INTO medicos (nombre, especialidad, perfil) VALUES (?, ?, ?)', 
+        [nombre, especialidad, perfil]);
+    revalidatePath('/medicos-bd');
 }
 
-async function PaginaProfesores() {
+async function PaginaMedicos() {
 
-    const [rows] = await connection.query('SELECT * FROM profesores');
+    const [rows] = await connection.query('SELECT * FROM medicos');
 
     return (
 
 <>
-<form action={insertarProfesor}>
+<form action={insertarMedicos}>
 
     <input type="text" name="nombre"  placeholder="Nombre"/>
     <input type="text" name="especialidad" placeholder="Especialidad"/>
-    <input type="text" name="estado_civil"  placeholder="Estado civil"/>
+    <input type="text" name="perfil"  placeholder="perfil"/>
     <button className="text-blue-500" >Insertar</button>
 </form>
 
         <div>
-            Lista de profesores
+            Lista de medicos
             {
-                rows.map(profesor =>
-                    <div key={profesor.id}>
-                        <Link href={`/profesores-bd');/${profesor.id}`}> {profesor.nombre}</Link>
-                        <Link className="text-green-500" href={`/profesores-bd/${profesor.id}/modificar-profesores`}> Modificar</Link>
+                rows.map(medicos =>
+                    <div key={medicos.id}>
+                        <Link href={`/medicos-bd');/${medicos.id}`}> {medicos.nombre}</Link>
+                        <Link className="text-green-500" href={`/medicos-bd/${medicos.id}/modificar-medicos`}> Modificar</Link>
 
-                        <form action={eliminarProfesor}>
-                            <input type="hidden" name="id" value={profesor.id} />
+                        <form action={eliminarMedicos}>
+                            <input type="hidden" name="id" value={medicos.id} />
                             < button className= "text-red-500">Eliminar</button>
                         </form>
                     </div>)
@@ -54,4 +54,4 @@ async function PaginaProfesores() {
     );
 }
 
-export default PaginaProfesores;
+export default PaginaMedicos;
