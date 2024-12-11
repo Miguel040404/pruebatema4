@@ -1,7 +1,10 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  return(
   <div>
-    hola
+
+    <Link href="/medicos-bd" className="block text-blue-500">Medicos</Link>
   </div>
+  );
 }
