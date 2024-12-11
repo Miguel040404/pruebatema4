@@ -24,7 +24,7 @@ VALUES
   
 
 
-CREATE TABLE profesores (
+CREATE TABLE pacientes (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(30) NOT NULL,
     especialidad VARCHAR(20),
@@ -35,7 +35,7 @@ CREATE TABLE profesores (
 
 -- ALTER TABLE medicos ADD COLUMN imagen VARCHAR(200) AFTER descripcion;
 
-INSERT INTO profesores (nombre, especialidad, estado_civil) 
+INSERT INTO pacientes (nombre, especialidad, estado_civil) 
 VALUES 
   ('Pepe', 'Docente', 'casado'),
   ('Pepa', 'Docente', 'viudo'),
