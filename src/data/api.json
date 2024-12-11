@@ -11,6 +11,12 @@
       "nombre": "Emi",
       "especialidad": "traumatologo",
       "perfil": "especialista"
+    },
+    {
+      "nombre": "Miguel",
+      "especialidad": "traumatologo",
+      "perfil": "especialista",
+      "id": "3"
     }
   ],
   "pacientes": [

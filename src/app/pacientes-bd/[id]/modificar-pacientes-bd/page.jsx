@@ -27,7 +27,7 @@ async function PaginaModificar({ params }) {
                 <input type="text" name="nombre" defaultValue={pacientes.nombre} />
                 <input type="text" name="localidad" defaultValue={pacientes.localidad} />
                 <input type="date" name="fecha_nacimiento" defaultValue={pacientes.fecha_nacimiento.toISOString().split('T')[0]} />
-                <button >Modificar</button>
+                <button> Modificar</button>
 
             </form>
 

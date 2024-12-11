@@ -11,7 +11,7 @@ const [rows] = await connection.query('SELECT * FROM pacientes WHERE id = ?', [i
         <div>
             <p>{pacientes.nombre}</p>
             <p>{pacientes.localidad}</p>
-            <p>{pacientes.perfil.fecha_nacimiento.toLocaleDateString()}</p>
+            <p>{pacientes.fecha_nacimiento.toLocaleDateString()}</p>
         </div>
      );
 }

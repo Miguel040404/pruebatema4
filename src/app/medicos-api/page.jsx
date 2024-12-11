@@ -15,14 +15,14 @@ async function eliminarMedicos(formData) {
 async function insertarMedicos(formData) {
     const nombre = formData.get('nombre');
     const especialidad = formData.get('especialidad');
-    const estado_civil = formData.get('estado_civil');
+    const perfil = formData.get('perfil');
 
     const response = await fetch('http://localhost:4000/medicos', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ nombre, especialidad, estado_civil }),
+        body: JSON.stringify({ nombre, especialidad, perfil }),
     });
 
     if (!response.ok) {
@@ -67,7 +67,7 @@ function PaginaMedicos() {
             }}>
                 <input type="text" name="nombre" placeholder="Nombre" required />
                 <input type="text" name="especialidad" placeholder="Especialidad" required />
-                <input type="text" name="estado_civil" placeholder="Estado civil" required />
+                <input type="text" name="perfil" placeholder="Perfil" required />
                 <button className="text-blue-500">Insertar</button>
             </form>
 

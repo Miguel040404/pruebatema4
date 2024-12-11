@@ -27,7 +27,7 @@ async function PaginaPacientes(params) {
 
     return (
 
-        <>  pacientes
+        <>  Lista de Pacientes
 
             <form action={insertarPaciente}>
                 <input type="text" name="nombre" />
@@ -42,7 +42,7 @@ async function PaginaPacientes(params) {
                     rows.map(pacientes =>
                         <div key={pacientes.id}>
                             <Link href={`/pacientes-bd/${pacientes.id}`}>{pacientes.nombre}</Link>
-                            <Link className="text-green-500" href={`/pacientes-bd/${pacientes.id}/modificar-pacientes-bd`}>Modificar</Link>
+                            <Link className="text-green-500" href={`/pacientes-bd/${pacientes.id}/modificar-pacientes-bd`}> Modificar</Link>
                             <form action={eliminarPacientes}>
                                 <input type="hidden" name="id" value={pacientes.id} />
                                 <button className="text-red-500">Eliminar</button>

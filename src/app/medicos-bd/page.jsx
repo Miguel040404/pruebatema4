@@ -27,12 +27,12 @@ async function PaginaMedicos(params) {
 
     return (
 
-        <>  Medicos
+        <>  Lista de Medicos
 
             <form action={insertarAlumno}>
-                <input type="text" name="nombre" />
-                <input type="text" name="especialidad" />
-                <input type="text" name="perfil" />
+                <input type="text" name="nombre" placeholder="Nombre" required />
+                <input type="text" name="especialidad" placeholder="Especialidad" required />
+                <input type="text" name="perfil" placeholder="Perfil" required />
                 <button>Insertar</button>
             </form>
 
