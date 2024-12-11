@@ -1,13 +1,13 @@
 import Link from "next/link";
-import connection from "../lib/mysql";
+import connection from "@/lib/mysql";
 import { revalidatePath } from "next/cache";
 
 
 async function eliminarMedicos(formData) {
     'use server'
-const id = formData.get('id')
+    const id = formData.get('id')
 
-await connection.query('DELETE FROM medicos WHERE id = ?', [id])
+    await connection.query('DELETE FROM medicos WHERE id = ?', [id])
 }
 
 async function insertarAlumno(formData) {
@@ -18,40 +18,40 @@ async function insertarAlumno(formData) {
 
     await connection.query('INSERT INTO medicos (nombre, especialidad, perfil) VALUES (?, ?, ?)',
         [nombre, especialidad, perfil])
-        revalidatePath('/medicos-bd')
+    revalidatePath('/medicos-bd')
 }
 
 async function PaginaMedicos(params) {
-    
-    const [rows] = await connection.query ('SELECT * FROM medicos');
+
+    const [rows] = await connection.query('SELECT * FROM medicos');
 
     return (
 
-      <>  Medicos
+        <>  Medicos
 
-        <form action={insertarAlumno}>
-            <input type="text" name="nombre" />
-            <input type="text" name="especialidad" />
-            <input type="text" name="perfil" />
-            <button>Insertar</button>
-        </form>
+            <form action={insertarAlumno}>
+                <input type="text" name="nombre" />
+                <input type="text" name="especialidad" />
+                <input type="text" name="perfil" />
+                <button>Insertar</button>
+            </form>
 
-<div>
-        {
+            <div>
+                {
 
-            rows.map(medicos=>
-                <div key={medicos.id}>
-                    <Link href={`/medicos-bd/${medicos.id}`}>{medicos.nombre}</Link>
-                    <Link className="text-green-500" href={`/medicos-bd/${medicos.id}/modificar-medicos-bd`}>Modificar</Link>
-                    <form action={eliminarMedicos}>
-                        <input type="hidden" name="id" value={medicos.id} />
-                        <button className="text-red-500">Eliminar</button>
-                    </form>
-                </div>
-            )
-        }
-</div>
-      </>
+                    rows.map(medicos =>
+                        <div key={medicos.id}>
+                            <Link href={`/medicos-bd/${medicos.id}`}>{medicos.nombre}</Link>
+                            <Link className="text-green-500" href={`/medicos-bd/${medicos.id}/modificar-medicos-bd`}>Modificar</Link>
+                            <form action={eliminarMedicos}>
+                                <input type="hidden" name="id" value={medicos.id} />
+                                <button className="text-red-500">Eliminar</button>
+                            </form>
+                        </div>
+                    )
+                }
+            </div>
+        </>
     );
 
 }
