@@ -6,8 +6,12 @@ const usuarios = [
   { nombre: 'jose', email: 'jose@jose.com', key: '123' },
   { nombre: 'pepe', email: 'pepe@pepe.com', key: '456' },
   { nombre: 'juan', email: 'juan@juan.com', key: '789' },
-  { nombre: 'a', email: 'a@a.com', key: '4444' }
+  { nombre: 'a', email: 'a@a.com', key: '4444' },
+  { nombre: 'medico1', email: 'medico1@.com', key: 'medico1' },
+  { nombre: 'medico2', email: 'medico2@.com', key: 'medico2' }
 ]
+// medico1 / medico1
+// medico2 / medico2
 
 export async function login(formData) {
   const LOGIN_URL = '/'

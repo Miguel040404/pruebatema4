@@ -19,7 +19,6 @@
       "id": "3"
     }
   ],
-  
   "pacientes": [
     {
       "id": "1",
@@ -38,7 +37,6 @@
       "nombre": "Miguel",
       "localidad": "Aguilar",
       "fecha_nacimiento": "2004-12-04"
-      
     }
   ]
 }
