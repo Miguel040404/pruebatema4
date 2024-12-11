@@ -1,37 +1,19 @@
 {
-  "alumnos": [
+  "medicos": [
     {
       "id": "1",
       "nombre": "MJ",
-      "localidad": "Aguilar",
-      "fecha_nacimiento": "1975-01-15"
+      "especialidad": "traumatologo",
+      "perfil": "especialista"
     },
     {
       "id": "2",
       "nombre": "Emi",
-      "localidad": "Aguilar",
-      "fecha_nacimiento": "1975-01-15"
-    },
-    {
-      "id": "3",
-      "nombre": "Miguel",
-      "localidad": "Aguilar",
-      "fecha_nacimiento": "1975-01-15"
-    },
-    {
-      "id": "d100",
-      "nombre": "pollo",
-      "localidad": "La Ramblas",
-      "fecha_nacimiento": "2024-12-04"
-    },
-    {
-      "nombre": "aa",
-      "localidad": "aa",
-      "fecha_nacimiento": "2024-12-06",
-      "id": "f760"
+      "especialidad": "traumatologo",
+      "perfil": "especialista"
     }
   ],
-  "profesores": [
+  "pacientes": [
     {
       "id": "1",
       "nombre": "MJ",
@@ -49,12 +31,6 @@
       "especialidad": "Aguilar",
       "estado_civil": "casado",
       "id": "3"
-    },
-    {
-      "nombre": "aaarf",
-      "especialidad": "aaarf",
-      "estado_civil": "aaarf",
-      "id": "3f11"
     }
   ]
 }

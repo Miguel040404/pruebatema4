@@ -15,6 +15,10 @@ const menu = [
     {
         text: 'Pacientes-bd',
         href: '/pacientes-bd'
+    },
+    {
+        text: 'Medicos-api',
+        href: '/medicos-api'
     }
 ]
 
