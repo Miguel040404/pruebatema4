@@ -21,22 +21,20 @@ VALUES
   ('Emi  ', 'traumatologo', 'especialista'),
   ('Miguel  ', 'traumatologo', 'especialista');
 
-  
-
 
 CREATE TABLE pacientes (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(30) NOT NULL,
-    especialidad VARCHAR(20),
-    estado_civil VARCHAR(30),
+    localidad VARCHAR(40),
+    fecha_nacimiento DATE,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 -- ALTER TABLE medicos ADD COLUMN imagen VARCHAR(200) AFTER descripcion;
 
-INSERT INTO pacientes (nombre, especialidad, estado_civil) 
+INSERT INTO pacientes (nombre, localidad, fecha_nacimiento) 
 VALUES 
-  ('Pepe', 'Docente', 'casado'),
-  ('Pepa', 'Docente', 'viudo'),
-  ('Pepi', 'Docente', 'pollo');
+  ('Pepa', 'Aguilar', '2000-01-15'),
+  ('Pepi', 'Aguilar', '2000-01-15'),
+  ('Pepo', 'Aguilar', '2000-01-15');

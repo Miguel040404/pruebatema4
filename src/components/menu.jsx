@@ -9,24 +9,12 @@ const menu = [
         href: '/'
     },
     {
-        text: 'medicos-bd',
+        text: 'Medicos-bd',
         href: '/medicos-bd'
     },
     {
-        text: 'Alumnos-api',
-        href: '/alumnos-api'
-    },
-    {
-        text: 'Profesores-bd',
-        href: '/profesores-bd'
-    },
-    {
-        text: 'Profesores-api',
-        href: '/profesores-api'
-    },
-    {
-        text: 'Acerca de ...',
-        href: '/acerca'
+        text: 'Pacientes-bd',
+        href: '/pacientes-bd'
     }
 ]
 
