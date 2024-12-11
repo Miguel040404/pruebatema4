@@ -6,21 +6,22 @@ USE hospital;
 
 CREATE TABLE medicos (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(200) NOT NULL,
-    localidad VARCHAR(200),
-    fecha_nacimiento DATE,
+    nombre VARCHAR(20) NOT NULL,
+    especialidad VARCHAR(20),
+    perfil VARCHAR(30),
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 -- ALTER TABLE medicos ADD COLUMN imagen VARCHAR(200) AFTER descripcion;
 
-INSERT INTO medicos (nombre, localidad, fecha_nacimiento) 
+INSERT INTO medicos (nombre, especialidad, perfil) 
 VALUES 
-  ('MJ  ', 'Aguilar', '2000-01-15'),
-  ('Emi  ', 'Aguilar', '2000-01-15'),
-  ('Miguel  ', 'Aguilar', '2000-01-15');
+  ('MJ  ', 'traumatologo', 'especialista'),
+  ('Emi  ', 'traumatologo', 'especialista'),
+  ('Miguel  ', 'traumatologo', 'especialista');
 
+  
 
 
 CREATE TABLE profesores (
