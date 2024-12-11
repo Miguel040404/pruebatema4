@@ -19,24 +19,26 @@
       "id": "3"
     }
   ],
+  
   "pacientes": [
     {
       "id": "1",
       "nombre": "MJ",
-      "especialidad": "Aguilar",
-      "estado_civil": "casado"
+      "localidad": "Aguilar",
+      "fecha_nacimiento": "2004-12-04"
     },
     {
       "id": "2",
       "nombre": "Emi",
-      "especialidad": "Aguilar",
-      "estado_civil": "casado"
+      "localidad": "Aguilar",
+      "fecha_nacimiento": "2004-12-04"
     },
     {
+      "id": "3",
       "nombre": "Miguel",
-      "especialidad": "Aguilar",
-      "estado_civil": "casado",
-      "id": "3"
+      "localidad": "Aguilar",
+      "fecha_nacimiento": "2004-12-04"
+      
     }
   ]
 }

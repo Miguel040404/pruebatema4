@@ -30,8 +30,8 @@ async function PaginaPacientes(params) {
         <>  Lista de Pacientes
 
             <form action={insertarPaciente}>
-                <input type="text" name="nombre" />
-                <input type="text" name="localidad" />
+                <input type="text" name="nombre" placeholder="Nombre" required />
+                <input type="text" name="localidad" placeholder="Localidad" required />
                 <input type="date" name="fecha_nacimiento" />
                 <button className="text-blue-500">Insertar</button>
             </form>
